@@ -13,6 +13,9 @@ const submitData = (userName, userEmail) => {
     return response.json()
   })
   .then((userObj) => {
-    
+    const body = document.querySelector("body")
+    const p = document.createElement("p")
+    p.textContent = userObj.id
+    body.appendChild(p)
   })
 }
